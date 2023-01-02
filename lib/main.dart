@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:webtoons/widgets/button.dart';
 
 void main() {
   runApp(App());
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
         backgroundColor: const Color(0xFF181818),
         body: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 40,
+            horizontal: 20,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,20 +67,16 @@ class App extends StatelessWidget {
                 height: 25,
               ),
               Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(45)),
-                    child: const Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 20, horizontal: 50),
-                      child: Text(
-                        'Transtfer',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ),
-                  )
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Button(
+                      text: "Transfer",
+                      bgColor: Color(0xFFF1B33B),
+                      textColor: Colors.black),
+                  Button(
+                      text: "Request",
+                      bgColor: Color(0xFF1F2123),
+                      textColor: Colors.white)
                 ],
               )
             ],
